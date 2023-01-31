@@ -28,7 +28,7 @@ public class SocketServer {
     ActiveCount threadCount = new ActiveCount();
     System.out.println("Server started .....");
     while (true) {
-      // acept connection and start thread  
+      // accept connection and start thread
       Socket clientSocket = m_ServerSocket.accept();
       SocketHandlerThread server = new SocketHandlerThread (clientSocket, threadCount);
       server.start();
